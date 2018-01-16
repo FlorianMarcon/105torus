@@ -1,0 +1,19 @@
+#! /usr/bin/env python3
+
+import sys
+from torus import *
+from bisection_method import *
+from newton_method import *
+from secant_method import *
+from math import ceil
+
+if __name__ == "__main__":
+	if len(sys.argv) == 8 and sys.argv[1] == '1':
+		torus = Torus(float(sys.argv[6]), float(sys.argv[5]), float(sys.argv[4]), float(sys.argv[3]), float(sys.argv[2]))
+		bisection_method(torus, int(sys.argv[7]))
+	if len(sys.argv) == 8 and sys.argv[1] == '2':
+		torus = Torus(float(sys.argv[6]), float(sys.argv[5]), float(sys.argv[4]), float(sys.argv[3]), float(sys.argv[2]))
+		newton_method(torus, int(sys.argv[7]))
+	if len(sys.argv) == 8 and sys.argv[1] == '3':
+		torus = Torus(float(sys.argv[6]), float(sys.argv[5]), float(sys.argv[4]), float(sys.argv[3]), float(sys.argv[2]))
+		secant_method(torus, int(sys.argv[7]))
