@@ -1,3 +1,5 @@
+from torus import *
+
 def secant_method(torus, size):
 	x1 = 0
 	x2 = 1
@@ -17,5 +19,5 @@ def secant_method(torus, size):
 		result = ((x1 - x2) / (torus.calcul(x1) - torus.calcul(x2)))
 		result = result * torus.calcul(x1)
 		result = x1 - result
-		print("x =", round(result, size))
+		print("x =", trunc_float(result, size + 1))
 	return(result)

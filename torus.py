@@ -1,3 +1,16 @@
+def trunc_float(nb, size):
+	i = 0
+	nb = str(nb)
+	a = 0
+	while i < len(nb) and nb[i] != '.':
+		i = i + 1
+	while i < len (nb) and a < size:
+		i = i + 1
+		a = a + 1
+	if i == len(nb):
+		return (nb)
+	return (nb[0:i])
+
 class Torus:
 	def __init__(self, a, b, c, d, e):
 		self.a = a
