@@ -11,6 +11,19 @@ def trunc_float(nb, size):
 		return (nb)
 	return (nb[0:i])
 
+def display_torus(nb, size):
+	nb_round = round(nb, size)
+	i = 0
+	nb_round = str(nb_round)
+	print("x = ", end = '')
+	while i < len(nb_round) and i < size + 2:
+		print(nb_round[i], end = '')
+		i = i + 1
+	while i < len(str(nb)) and i < size + 2:
+		print('0', end = '')
+		i = i + 1
+	print ()
+
 class Torus:
 	def __init__(self, a, b, c, d, e):
 		self.a = a

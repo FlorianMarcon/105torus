@@ -19,5 +19,5 @@ def secant_method(torus, size):
 		result = ((x1 - x2) / (torus.calcul(x1) - torus.calcul(x2)))
 		result = result * torus.calcul(x1)
 		result = x1 - result
-		print("x =", trunc_float(result, size + 1))
+		display_torus(result, size)
 	return(result)
